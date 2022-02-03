@@ -33,7 +33,7 @@ public class CovidDataService {
     String url = "https://coronavirus.politologue.com/data/coronavirus/coronacsv.aspx?format=csv&t=pays";
 
     @PostConstruct
-    @Scheduled(fixedRate=10800000)
+    @Scheduled(fixedRate=10800001)
     public void saveCoviddata() throws IOException {
         // get covid data
         ResponseEntity<Resource> response = rt.getForEntity(url, Resource.class);
